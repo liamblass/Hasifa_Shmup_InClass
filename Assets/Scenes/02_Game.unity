@@ -191,6 +191,7 @@ MonoBehaviour:
   projectileSpeed: 10
   projectileLifeTime: 1
   timeBetweenShots: 0.3
+  projectilesPoolName: 0
   isShooting: 0
 --- !u!114 &216990835
 MonoBehaviour:
@@ -497,7 +498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.2816925, y: 19.7334}
+  m_AnchoredPosition: {x: -0.28167725, y: 19.733398}
   m_SizeDelta: {x: -26.4831, y: 29.3244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &414263540
@@ -902,6 +903,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814628228}
   m_CullTransparentMesh: 1
+--- !u!1 &1857619459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1857619461}
+  - component: {fileID: 1857619460}
+  m_Layer: 0
+  m_Name: PoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1857619460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857619459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f45aa9bf2e6b4954495e835538c0f862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - name: 0
+    size: 50
+    prefab: {fileID: 3177696856218571030, guid: f42880111b98d854fa2e79409b6d0db1, type: 3}
+  - name: 1
+    size: 50
+    prefab: {fileID: 3786147726624741727, guid: ef71de54298bb3345b336acdb1d0accc, type: 3}
+--- !u!4 &1857619461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857619459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2001253196
 GameObject:
   m_ObjectHideFlags: 0

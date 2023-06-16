@@ -48,6 +48,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "fc29b4b8-1611-48e7-b044-e190ddabe60f",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "2D Vector",
                     "id": "b517a74f-de82-4a2a-883f-00111ccdd97f",
                     "path": "2DVector",
@@ -145,6 +156,17 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "cb5ef4cf-5255-479f-b70d-273ea6b4ade0",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

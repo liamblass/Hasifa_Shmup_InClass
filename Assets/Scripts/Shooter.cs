@@ -9,6 +9,7 @@ public class Shooter: MonoBehaviour
     [SerializeField] private float projectileSpeed;
     [SerializeField] private float projectileLifeTime;
     [SerializeField] private float timeBetweenShots;
+    [SerializeField] private PoolNames projectilesPoolName;
 
     //[Header("FOR ENEMIES ONLY")]
 
@@ -55,15 +56,21 @@ public class Shooter: MonoBehaviour
     {
         while (true)
         {
-            GameObject newProjectile = Instantiate(
+            /*GameObject newProjectile = Instantiate(
                 projectilePrefab,
+                transform.position,
+                Quaternion.identity);*/
+
+            GameObject newProjectile = PoolManager.Instance.TakeFromPool(
+                projectilesPoolName,
                 transform.position,
                 Quaternion.identity);
 
             Rigidbody2D rb = newProjectile.GetComponent<Rigidbody2D>();
             rb.velocity = Vector2.up * projectileSpeed;
 
-            Destroy(newProjectile, projectileLifeTime);
+            //Destroy(newProjectile, projectileLifeTime);
+            PoolManager.Instance.ReturnToPool(newProjectile, projectileLifeTime);
 
             yield return new WaitForSeconds(timeBetweenShots);
         }
