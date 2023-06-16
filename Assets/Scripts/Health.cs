@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
     public static event Action<int, int> OnPlayerLoseHealth;
 
     [SerializeField] private int initialHealth = 5;
-    [SerializeField] private int currentHealth;
+    private int currentHealth;
 
     [SerializeField] private bool isPlayer = false;
 
