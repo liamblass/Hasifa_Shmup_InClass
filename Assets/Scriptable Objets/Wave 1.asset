@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 3316860232283599225, guid: 7212efea55a3b244cb089047736eb2c5, type: 3}
   speed: 4
-  timeBetweenEnemies: 0.5
+  timeBetweenEnemies: 0.9
   enemies:
   - {fileID: 11400000, guid: 810531a53f9874d43ac0de36dfa6c609, type: 2}
   - {fileID: 11400000, guid: 2fedf257751437741b76defa21af220b, type: 2}

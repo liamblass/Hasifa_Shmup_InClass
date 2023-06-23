@@ -6,12 +6,16 @@ public class PathFollower : MonoBehaviour
 {
     private List<Transform> waypoints;
     private int currentWaypointIndex = 0;
+    private float moveSpeed;
 
-    public void SetWaypoints(List<Transform> w)
+    public void SetFollowParams(List<Transform> points, float speed)
     {
-        waypoints = w;
+        waypoints = points;
         transform.position = waypoints[0].position;
+
+        moveSpeed = speed;
     }
+
 
     private void Update()
     {
@@ -20,7 +24,24 @@ public class PathFollower : MonoBehaviour
 
     private void FollowPath()
     {
+        if (currentWaypointIndex < waypoints.Count)
+        {
+            Vector3 destination = waypoints[currentWaypointIndex].position;
 
+            transform.position = Vector2.MoveTowards(
+                transform.position,
+                destination,
+                moveSpeed * Time.deltaTime);
+
+            if (transform.position == destination)
+            {
+                currentWaypointIndex++;
+            }
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
 
