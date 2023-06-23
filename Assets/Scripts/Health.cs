@@ -65,6 +65,12 @@ public class Health : MonoBehaviour
         currentHealth = initialHealth;
     }
 
+    public void SetInitialHealth(int h)
+    {
+        currentHealth = h;
+        initialHealth = h;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         /*Damager damager = collision.GetComponent<Damager>();

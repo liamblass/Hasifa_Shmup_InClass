@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 497da26105ca3dd48ad9cec986f4c4e9, type: 3}
-  m_Name: Wqve 0
+  m_Name: Wave 1
   m_EditorClassIdentifier: 
-  path: {fileID: 3316860232283599225, guid: 3d8cf30ea55e56649bef2b5445c24059, type: 3}
-  speed: 2
+  path: {fileID: 3316860232283599225, guid: 7212efea55a3b244cb089047736eb2c5, type: 3}
+  speed: 4
   timeBetweenEnemies: 0.5
   enemies:
   - {fileID: 11400000, guid: 810531a53f9874d43ac0de36dfa6c609, type: 2}
-  - {fileID: 11400000, guid: 810531a53f9874d43ac0de36dfa6c609, type: 2}
+  - {fileID: 11400000, guid: 2fedf257751437741b76defa21af220b, type: 2}
   - {fileID: 11400000, guid: 810531a53f9874d43ac0de36dfa6c609, type: 2}
   - {fileID: 11400000, guid: b47f0b6ee52d42d41a277b4f7eb0a17b, type: 2}
+  - {fileID: 11400000, guid: 2fedf257751437741b76defa21af220b, type: 2}

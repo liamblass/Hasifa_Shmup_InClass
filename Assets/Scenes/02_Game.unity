@@ -191,7 +191,7 @@ MonoBehaviour:
   projectileLifeTime: 1
   timeBetweenShots: 0.3
   projectilesPoolName: 0
-  isEnemy: 1
+  isEnemy: 0
   isShooting: 0
 --- !u!114 &216990835
 MonoBehaviour:
@@ -377,7 +377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &404115050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,6 +826,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1522840728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1522840730}
+  - component: {fileID: 1522840731}
+  m_Layer: 0
+  m_Name: EnemiesSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1522840730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522840728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1522840731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522840728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32d0fc44d507c6246a896a4020d585c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - {fileID: 11400000, guid: eda3a5a8cc397a24c98f4e18138d97f7, type: 2}
+  - {fileID: 11400000, guid: 0cd01c9f24d4ded4dabdcde25aaf8f03, type: 2}
+  - {fileID: 11400000, guid: 31bcac7e06724a94f8210575978e6cca, type: 2}
+  timeBetweenWaves: 0.5
+  enemyPrefab: {fileID: 379550636337201574, guid: 118b7546ad5d7584f80fee47ce045574, type: 3}
 --- !u!1 &1814628228
 GameObject:
   m_ObjectHideFlags: 0
