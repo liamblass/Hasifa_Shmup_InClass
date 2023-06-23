@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class PathFollower : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private List<Transform> waypoints;
+    private int currentWaypointIndex = 0;
+
+    public void SetWaypoints(List<Transform> w)
     {
-        
+        waypoints = w;
+        transform.position = waypoints[0].position;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        FollowPath();
     }
+
+    private void FollowPath()
+    {
+
+    }
+
+
 }

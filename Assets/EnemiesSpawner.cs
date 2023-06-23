@@ -37,6 +37,7 @@ public class EnemiesSpawner : MonoBehaviour
 
                     newEnemy.GetComponentInChildren<SpriteRenderer>().sprite = enemiesParameters[i].sprite;
                     newEnemy.GetComponent<Health>().SetInitialHealth(enemiesParameters[i].health);
+                    newEnemy.GetComponent<PathFollower>().SetWaypoints(currentWave.GetWaypoints());
 
                     yield return new WaitForSeconds(currentWave.timeBetweenEnemies);
 
