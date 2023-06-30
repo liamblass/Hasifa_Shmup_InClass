@@ -54,8 +54,14 @@ public class Health : MonoBehaviour
             else
             {
               OnEnemyDead?.Invoke();
+          
             }
 
+            PoolManager.Instance.TakeFromPool(
+                PoolNames.explosion,
+                transform.position,
+                Quaternion.identity);
+            
             Destroy(gameObject);
         }
     }

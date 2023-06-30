@@ -89,10 +89,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: -10
   projectileLifeTime: 1
-  timeBetweenShots: 0.3
+  timeBetweenShots: 0.8
   projectilesPoolName: 1
   isEnemy: 1
   isShooting: 0
+  fireRateVariance: 0.3
+  fireRateMinimum: 0.3
 --- !u!114 &5185234143750226428
 MonoBehaviour:
   m_ObjectHideFlags: 0

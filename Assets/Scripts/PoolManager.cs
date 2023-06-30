@@ -81,6 +81,8 @@ public class PoolManager : MonoBehaviour
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
 
+        objectToSpawn.GetComponent<IPoolable>().OnTakeFromPool();
+
         poolsDictionary[poolName].Enqueue(objectToSpawn);
 
         return objectToSpawn;
@@ -88,6 +90,9 @@ public class PoolManager : MonoBehaviour
 
     public void ReturnToPool(GameObject obj)
     {
+        obj.GetComponent<IPoolable>().OnReturnToPool();
+
+
         obj.SetActive(false);
     }
 
@@ -115,7 +120,15 @@ public GameObject prefab;
 public enum PoolNames
 {
     playerProjectiles,
-    enemyProjectiles
+    enemyProjectiles,
+    explosion
+}
+
+public interface IPoolable
+{
+    public void OnTakeFromPool();
+    public void OnReturnToPool();
+
 }
 
 

@@ -11,9 +11,11 @@ public class Shooter: MonoBehaviour
     [SerializeField] private float timeBetweenShots;
     [SerializeField] private PoolNames projectilesPoolName;
 
-    //[Header("FOR ENEMIES ONLY")]
+    [Header("FOR ENEMIES ONLY")]
     [SerializeField] private bool isEnemy = false;
     [HideInInspector] public bool isShooting;
+    [SerializeField] private float fireRateVariance = 0.2f;
+    [SerializeField] private float fireRateMinimum = 0.5f;
 
     // please add a time variance to the enemies shooting rate
 
@@ -75,7 +77,14 @@ public class Shooter: MonoBehaviour
             //Destroy(newProjectile, projectileLifeTime);
             PoolManager.Instance.ReturnToPool(newProjectile, projectileLifeTime);
 
-            yield return new WaitForSeconds(timeBetweenShots);
+            //////////
+            float timeToWait = UnityEngine.Random.Range(
+                timeBetweenShots - fireRateVariance,
+                timeBetweenShots + fireRateVariance);
+
+            timeToWait = Mathf.Max(timeToWait, fireRateMinimum);
+
+            yield return new WaitForSeconds(timeToWait);
         }
     }
 }
