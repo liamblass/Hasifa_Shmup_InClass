@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Shooter: MonoBehaviour
 {
+    public UnityEvent OnShoot;
+    
     [Header("GENERAL")]
     //[SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float projectileSpeed;
@@ -73,6 +76,8 @@ public class Shooter: MonoBehaviour
 
             Rigidbody2D rb = newProjectile.GetComponent<Rigidbody2D>();
             rb.velocity = Vector2.up * projectileSpeed;
+
+            OnShoot?.Invoke();
 
             //Destroy(newProjectile, projectileLifeTime);
             PoolManager.Instance.ReturnToPool(newProjectile, projectileLifeTime);

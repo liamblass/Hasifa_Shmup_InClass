@@ -35,6 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8087554287663017995}
+  - {fileID: 1447036243150687843}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -87,6 +88,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558a0d5ead3bc924885277e3fd81d73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnShoot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3380422379794694278}
+        m_TargetAssemblyTypeName: SoundMaker, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: bc455c0996dfaac4095016283dbd379d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   projectileSpeed: -10
   projectileLifeTime: 1
   timeBetweenShots: 0.8
@@ -218,3 +234,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &8295697401310310690
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7527503160808905395}
+    m_Modifications:
+    - target: {fileID: 2296335948900909927, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+      propertyPath: m_Name
+      value: SoundMaker
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436809808254582593, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436809808254582593, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436809808254582593, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436809808254582593, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436809808254582593, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436809808254582593, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436809808254582593, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436809808254582593, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436809808254582593, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436809808254582593, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436809808254582593, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+--- !u!4 &1447036243150687843 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7436809808254582593, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+  m_PrefabInstance: {fileID: 8295697401310310690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3380422379794694278 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6758092054893097380, guid: 92688ad0b45f5d348acadd44fb445e49, type: 3}
+  m_PrefabInstance: {fileID: 8295697401310310690}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f27648859da919439777e6726000967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
