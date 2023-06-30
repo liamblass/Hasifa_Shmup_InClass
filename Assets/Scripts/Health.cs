@@ -54,8 +54,14 @@ public class Health : MonoBehaviour
             else
             {
               OnEnemyDead?.Invoke();
+          
             }
 
+            PoolManager.Instance.TakeFromPool(
+                PoolNames.explosion,
+                transform.position,
+                Quaternion.identity);
+            
             Destroy(gameObject);
         }
     }
@@ -63,6 +69,12 @@ public class Health : MonoBehaviour
     private void ResetHealth()
     {
         currentHealth = initialHealth;
+    }
+
+    public void SetInitialHealth(int h)
+    {
+        currentHealth = h;
+        initialHealth = h;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

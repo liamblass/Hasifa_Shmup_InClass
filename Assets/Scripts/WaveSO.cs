@@ -13,4 +13,21 @@ public class WaveSO : ScriptableObject
     public float timeBetweenEnemies;
 
     public List<EnemySO> enemies = new List<EnemySO>();
+
+    public List<Transform> GetWaypoints()
+    {
+        List<Transform> waypoints = new List<Transform>();
+
+        foreach (Transform child in path.transform)
+        {
+            waypoints.Add(child);
+        }
+
+        return waypoints;
+    }
+
+    public List<EnemySO> GetEnemies()
+    {
+        return enemies;
+    }
 }

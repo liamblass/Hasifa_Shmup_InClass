@@ -13,6 +13,7 @@ public class Damager : MonoBehaviour
 
     public void HitSomething()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        PoolManager.Instance.ReturnToPool(gameObject);
     }
 }
